@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <title>Fuel Cost Calculator</title>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Fuel Cost Calculator</h1>
+
+        <input type="number" id="price" placeholder="Price per litre">
+        <input type="number" id="litres" placeholder="Litres">
+
+        <button onclick="calculate()">Calculate</button>
+
+        <h2 id="result"></h2>
+
+        <div class="name">Built by BIG_DAVE</div>
+    </div>
+
+    <script>
+        function calculate() {
+            let price = document.getElementById("price").value;
+            let litres = document.getElementById("litres").value;
+
+            let total = price * litres;
+
+            document.getElementById("result").innerText =
+                "Total Cost: ₦" + total;
+        }
+    </script>
+</body>
+</html>
